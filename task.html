@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>task</title>
+    </head>
+    <body>
+        <script>
+            function abc() {
+                let name=["saravanan","smiley","santhiya","saroo"];
+
+                let temp="";
+
+                for(let i=0;i<name.length;i++) {
+
+                    temp += "<li>" +name[i]+ "</li>";
+
+                    document.getElementById("sar").innerHTML=temp;
+
+                }
+            }
+        </script>
+        <script>
+            function sm() {
+             const brand=document.getElementById("a1").value;
+             const model=document.getElementById("a2").value;
+             const price=document.getElementById("a3").value;
+             const tr=document.createElement("tr");
+               tr.innerHTML=`<td>${brand}</td><td>${model}</td><td>${price}</td>`;
+               document.getElementById("ss").appendChild(tr);
+               
+
+                
+        }
+        </script>
+
+     <script>
+        function as() {
+    // Create and display an array:
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    fruits.sort();
+        }
+        function ds() {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    
+    
+    fruits.reverse();
+    
+    document.getElementById("demo2").innerHTML = fruits;
+        }
+    </script>
+
+          <button onclick="abc()">task</button>
+          <ul id="sar"></ul>
+
+          <div class="container mt-5">
+            <input type="text" id="a1">
+            <input type="text" id="a2">
+            <input type="text" id="a3">
+
+            <button onclick="sm()">sumit</button>
+
+          </div>
+          <table>
+            <thead>
+            <tr >
+                <th>Brand</th>
+                <th>model</th>
+                 <th>price</th>
+            </tr>
+           </thead>
+           <tbody id="ss"></tbody>
+          </table>
+
+          <button onclick="as()"> assending</button>
+          <p id="demo1"></p>
+
+          <button onclick="as()">desending</button>
+          <p id="demo2"></p>
+          
+
+    </body>
+</html>
